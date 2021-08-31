@@ -65,11 +65,43 @@ function fizzBuzz(arr){
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let newPhrase = [];
+  for (let index = 0; index < string.length; index += 1) {
+    if(string[index] === "a"){
+      newPhrase.push(1); 
+    }else if(string[index] === "e"){
+      newPhrase.push(2); 
+    }else if(string[index] === "i"){
+      newPhrase.push(3); 
+    }else if(string[index] === "o"){
+      newPhrase.push(4); 
+    }else if(string[index] === "u"){
+      newPhrase.push(5); 
+    }else{
+      newPhrase.push(string[index]);
+    }    
+  }
+  return (newPhrase.join(''));
 }
-function decode() {
-  // seu código aqui
+function decode(string){
+  let newPhrase = [];
+  for (let index = 0; index < string.length; index += 1) {
+    if(string[index] === '1'){
+      newPhrase.push('a'); 
+    }else if(string[index] === '2'){
+      newPhrase.push('e'); 
+    }else if(string[index] === '3'){
+      newPhrase.push('i'); 
+    }else if(string[index] === '4'){
+      newPhrase.push('o'); 
+    }else if(string[index] === '5'){
+      newPhrase.push('u'); 
+    }else{
+      newPhrase.push(string[index]);
+    }    
+  }
+  return (newPhrase.join(''));
 }
 
 module.exports = {

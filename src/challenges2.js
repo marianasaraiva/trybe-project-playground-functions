@@ -13,14 +13,14 @@ function techList(tech, name) {
   //condicional para relatar erro 
   if (arr.length === 0) {
     return "Vazio!"
-  } else {
-    return arr;
   }
+  return arr;
 }
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+  // receber um array e verificar se ele === 11 elementos
+  //for para verificar se repetiu - verifica cada indice para verificar 3 vezes
 }
 
 // Desafio 12

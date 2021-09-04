@@ -19,7 +19,8 @@ function splitSentence(string) {
 function concatName(arr) {
   let lastName = arr[arr.length - 1];
   let firstName = arr[0];
-  return (lastName + ', ' + firstName);
+  let space = ', ';
+  return lastName + space + firstName;
 }
 
 // Desafio 5
@@ -36,7 +37,7 @@ function highestCount(arr) {
   let highNumberRepet = 0;
   for (let position in arr) {
     if (arr[position] === arr[position.length - 1]) {
-      highNumberRepet ++;
+      highNumberRepet += 1;
     }
   }
   return highNumberRepet;
@@ -48,11 +49,11 @@ function highestCount(arr) {
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
     return 'cat2';
-  } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-    return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    return 'cat1';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -66,7 +67,7 @@ function fizzBuzz(arr) {
     } else if (arr[index] % 5 === 0) {
       result.push('buzz');
     } else {
-      result.push('bug!')
+      result.push('bug!');
     }
   }
   return result;
@@ -107,7 +108,7 @@ function decode(string) {
       newPhrase.push('u');
     } else {
       newPhrase.push(string[index]);
-    }    
+    }
   }
   return (newPhrase.join(''));
 }

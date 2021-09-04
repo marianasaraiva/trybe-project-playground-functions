@@ -12,7 +12,7 @@ function techList(tech, name) {
   }
   // condicional para relatar erro
   if (arr.length === 0) {
-    return "Vazio!";
+    return 'Vazio!';
   }
   return arr;
 }
@@ -51,24 +51,22 @@ function generatePhoneNumber(arr) {
     let second = arr.slice(7, 11).join('');
     let finishNumber = '(' + ddd + ')' + ' ' + first + '-' + second;
     return finishNumber;
-  } else {
-    return "Array com tamanho incorreto.";
   }
+  return 'Array com tamanho incorreto.';
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // exercicio discutido em grupo com Samuel e Luis Gustavo, para fazer os babySteps e interpretar o enunciado da questão.
   if ((lineA < lineB + lineC)
-  && (lineB < lineA + lineC)
-  && (lineC < lineA + lineB)
-  && Math.abs(lineA > lineB - lineC)
-  && Math.abs(lineB > lineA - lineC)
-  && Math.abs(lineC > lineA - lineB)) {
+    && (lineB < lineA + lineC)
+    && (lineC < lineA + lineB)
+    && Math.abs(lineA > lineB - lineC)
+    && Math.abs(lineB > lineA - lineC)
+    && Math.abs(lineC > lineA - lineB)) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 13
@@ -78,7 +76,7 @@ function hydrate(phrase) {
   let result = phrase.match(reg);
   // percorrer o array formado para transformar em number
   for (let index in result) {
-   result[index] = parseInt(result[index], 10);
+    result[index] = parseInt(result[index], 10);
   }
   // fazer a soma dos numeros do array criado
   let sum = 0;
@@ -87,10 +85,11 @@ function hydrate(phrase) {
   }
   // condição para verricar quantos copos de água terão.
   if (sum > 1) {
-    return sum + ' copos de água';
-  } else {
-    return sum + ' copo de água';
+    let string1 = ' copos de água';
+    return sum + string1;
   }
+  let string2 = ' copo de água';
+  return sum + string2;
 }
 
 module.exports = {

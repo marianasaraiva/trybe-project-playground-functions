@@ -57,8 +57,18 @@ function generatePhoneNumber(arr) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  //exercicio discutido em grupo com Samuel e Luis Gustavo, para fazer os babySteps
+  if ((lineA < lineB + lineC) &&
+      (lineB < lineA + lineC) && 
+      (lineC < lineA + lineB) &&
+      Math.abs(lineA > lineB - lineC) &&
+      Math.abs(lineB > lineA - lineC) &&
+      Math.abs(lineC > lineA - lineB) ){
+    return true
+  } else {
+    return false
+  }
 }
 
 // Desafio 13

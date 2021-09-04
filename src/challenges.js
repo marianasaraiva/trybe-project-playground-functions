@@ -1,10 +1,8 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if ((value1 === true) && (value2 === true)) {
+  if (value1 && value2) {
     return true;
-  } else {
-    return false;
-  }
+  } return false;
 }
 
 // Desafio 2
@@ -31,17 +29,17 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arr) {
-  arr.sort(function(a,b) {
-    //oredenar em ordem decrescente, considerando negativo
-    return b-a;
+  arr.sort(function (a, b) {
+    // ordenar em ordem decrescente, considerando negativo
+    return b - a;
   });
-  let highNumberRepete = 0;
-  for(let position in arr){
-    if(arr[position] === arr[position.length - 1]){
-      highNumberRepete ++
+  let highNumberRepet = 0;
+  for (let position in arr) {
+    if (arr[position] === arr[position.length - 1]) {
+      highNumberRepet ++;
     }
   }
-  return highNumberRepete;
+  return highNumberRepet;
 }
 
 // Desafio 7
@@ -49,48 +47,48 @@ function highestCount(arr) {
 // Colega Leandro Boralli.
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
-    return "cat2"
+    return 'cat2';
   } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
-    return "cat1"
+    return 'cat1';
   } else {
-    return "os gatos trombam e o rato foge"
+    return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
 function fizzBuzz(arr) {
-  let resultado = [];
+  let result = [];
   for (let index = 0; index < arr.length; index += 1) {
     if ((arr[index] % 3 === 0) && (arr[index] % 5 === 0)) {
-      resultado.push("fizzBuzz");
+      result.push('fizzBuzz');
     } else if (arr[index] % 3 === 0) {
-      resultado.push("fizz");
+      result.push('fizz');
     } else if (arr[index] % 5 === 0) {
-      resultado.push("buzz");
+      result.push('buzz');
     } else {
-      resultado.push("bug!")
+      result.push('bug!')
     }
   }
-  return resultado;
+  return result;
 }
 
 // Desafio 9
 function encode(string) {
   let newPhrase = [];
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === "a") {
-      newPhrase.push(1); 
-    } else if (string[index] === "e") {
-      newPhrase.push(2); 
-    } else if (string[index] === "i") {
-      newPhrase.push(3); 
-    } else if (string[index] === "o") {
-      newPhrase.push(4); 
-    } else if (string[index] === "u") {
-      newPhrase.push(5); 
+    if (string[index] === 'a') {
+      newPhrase.push(1);
+    } else if (string[index] === 'e') {
+      newPhrase.push(2);
+    } else if (string[index] === 'i') {
+      newPhrase.push(3);
+    } else if (string[index] === 'o') {
+      newPhrase.push(4);
+    } else if (string[index] === 'u') {
+      newPhrase.push(5);
     } else {
       newPhrase.push(string[index]);
-    }    
+    }
   }
   return (newPhrase.join(''));
 }
@@ -98,15 +96,15 @@ function decode(string) {
   let newPhrase = [];
   for (let index = 0; index < string.length; index += 1) {
     if (string[index] === '1') {
-      newPhrase.push('a'); 
+      newPhrase.push('a');
     } else if (string[index] === '2') {
-      newPhrase.push('e'); 
+      newPhrase.push('e');
     } else if (string[index] === '3') {
-      newPhrase.push('i'); 
+      newPhrase.push('i');
     } else if (string[index] === '4') {
-      newPhrase.push('o'); 
+      newPhrase.push('o');
     } else if (string[index] === '5') {
-      newPhrase.push('u'); 
+      newPhrase.push('u');
     } else {
       newPhrase.push(string[index]);
     }    

@@ -58,7 +58,7 @@ function generatePhoneNumber(arr) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  //exercicio discutido em grupo com Samuel e Luis Gustavo, para fazer os babySteps
+  //exercicio discutido em grupo com Samuel e Luis Gustavo, para fazer os babySteps e interpretar o enunciado da questão.
   if ((lineA < lineB + lineC) &&
       (lineB < lineA + lineC) && 
       (lineC < lineA + lineB) &&
@@ -72,8 +72,25 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(phrase) {
+  //forma de encontrar numeros em uma string - pesquisa: YoutubeJavaScript Problem: Extracting Numbers from a String.
+  let reg = /\d+/g;
+  let result = phrase.match(reg);
+  //percorrer o array formado para transformar em number
+   for (let index in result){
+    result[index] = parseInt(result[index]);
+   }
+   //fazer a soma dos numeros do array criado
+   let sum = 0;
+   for(let index = 0; index < result.length; index += 1){
+     sum += result[index]
+   }
+   // condição para verricar quantos copos de água terão.
+   if(sum > 1){
+     return sum + ' copos de água'
+   } else {
+     return sum + ' copo de água'
+   }
 }
 
 module.exports = {

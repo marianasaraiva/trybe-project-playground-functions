@@ -1,4 +1,4 @@
-# Projeto Trybewallet
+# Projeto Playground Functions
 Projeto desenvolvido no bloco 4 de Front-end do curso de Desenvolvimento Web da Trybe.
 
 
